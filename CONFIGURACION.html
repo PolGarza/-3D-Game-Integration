@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Control de Volumen de Audio</title>
+  <link rel="stylesheet" href="STYLES/settings2.css">
+</head>
+<body>
+  <h1>Control de Volumen de Audio</h1>
+  <input type="range" min="0" max="1" step="0.01" value="1" id="volumeRange">
+  <audio controls id="audioPlayer">
+    <source src="STYLES/AUDIO/MEOW.mp3" type="audio/mpeg">
+  </audio>
+
+  <a href="HOME.php"><button>Volver</button></a>
+
+  <script>
+    // Recuperar y aplicar el valor del volumen guardado
+    document.addEventListener('DOMContentLoaded', function() {
+      var savedVolume = localStorage.getItem('volume');
+      if (savedVolume !== null) {
+        var audio = document.getElementById('audioPlayer');
+        audio.volume = savedVolume;
+        var volumeRange = document.getElementById('volumeRange');
+        volumeRange.value = savedVolume;
+      }
+    });
+
+    // Función para guardar el valor del volumen en localStorage y actualizar el audio
+    function saveVolume() {
+      var volumeRange = document.getElementById('volumeRange');
+      var audio = document.getElementById('audioPlayer');
+      audio.volume = volumeRange.value;
+      localStorage.setItem('volume', volumeRange.value);
+    }
+
+    // Ejecutar saveVolume cada vez que cambie el valor del volumen
+    var volumeRange = document.getElementById('volumeRange');
+    volumeRange.addEventListener('input', saveVolume);
+  </script>
+</body>
+</html>

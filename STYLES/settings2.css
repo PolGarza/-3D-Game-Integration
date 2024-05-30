@@ -1,0 +1,30 @@
+/* Establece el fondo y la fuente global */
+body {
+  font-family: "Itim", cursive;
+  font-weight: 300;
+  font-style: normal;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  height: 100vh;
+  background-image: url("IMAGES/FONDO_DEGRADADO.png"), url("paper.gif");
+  background-repeat: no-repeat, repeat;
+  background-color: #cccccc; 
+}
+
+  
+  h1 {
+    margin-top: 50px;
+  }
+  
+  #audioPlayer {
+    margin-top: 20px;
+  }
+  
+  #volumeRange {
+    margin-top: 20px;
+    width: 200px;
+  }
+
+
+  

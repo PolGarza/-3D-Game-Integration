@@ -1,0 +1,167 @@
+/* ACOMODO DE OBJETOS PARA EL PRODUCTO */
+
+/* Establece el box model para todos los elementos */
+* {
+    padding: 0; 
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Establece el fondo y la fuente global */
+body {
+    font-family: "Itim", cursive;
+    font-weight: 300;
+    font-style: normal;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    height: 100vh;
+    background-image: url("IMAGES/FONDO_HOME.png"), url("paper.gif");
+    background-repeat: no-repeat, repeat;
+    background-color: #cccccc; 
+}
+
+/* Estilo para el contenedor principal del formulario */
+.form-body {
+    width: 700px;
+    min-width: 500px;
+    border-radius: 20px;
+    border-top-left-radius: 150px;
+    border-bottom-right-radius: 150px;
+    border: 2px solid #FA8072 ;
+    margin: 10px;
+    position: relative;
+}
+
+/* Estilo para los inputs del formulario */
+.form-body input {
+    display: block;
+    margin: auto;
+    height: 40px;
+    width: 75%;
+    padding-left: 10px;
+    border-radius: 5px;
+    font-family: "Itim", cursive;
+    font-size: 1rem;
+    outline: none;
+    font-weight: 400;
+}
+
+/* Estilo específico para el input de contraseña */
+.form-body input[type=password] {
+    margin-top: 20px;
+}
+
+/* Estilo para los inputs al pasar el cursor */
+.form-body input:hover {
+    transition: .2s; 
+    border: 3px solid #8b3300;
+    color: black; 
+}
+
+
+.contenedor {
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+}
+/* Estilo para los botones del formulario */
+.form-body button {
+    display: block;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    height: 50px;
+    width: 30%;
+    background-color: beige;
+    color: #160800;
+    border-radius: 3px;
+    font-family: "Itim", cursive;
+    cursor: pointer;
+    outline: none;
+    transition: all .2s ease;
+}
+
+/* Ajusta los márgenes y espaciado */
+
+
+.imagen-port {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    position: relative;
+}
+
+.imagen-port > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hover-galeria {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    background: hsla(32, 98%, 43%, 0.658);
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hover-galeria img {
+    width: 100px;
+}
+
+.hover-galeria p {
+    color: #fff;
+}
+
+.imagen-port:hover .hover-galeria {
+    transform: scale(1);
+}
+
+
+/* Estilos para la tabla */
+
+/* Estilos para la tabla */
+.tabla-container {
+    width: 300px; /* Ancho deseado de la tabla */
+    overflow-y: scroll; /* Añade un deslizador vertical */
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px; /* Bordes redondos */
+    overflow: hidden;
+}
+
+thead {
+    background-color: #FA8072; /* Color de fondo del encabezado */
+    color: white; /* Color del texto del encabezado */
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd; /* Línea divisoria entre filas */
+}
+
+tbody tr:hover {
+    background-color: #f2f2f2; /* Cambia el color de fondo al pasar el cursor */
+}

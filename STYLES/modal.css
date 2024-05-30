@@ -1,0 +1,56 @@
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  }
+
+  .modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border: 1px solid #888;
+    background-color: #fefefe;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px; /* Esquinas redondeadas para el modal */
+    background-image: url('IMAGES/FONDO_DEGRADADO.png'); /* Reemplaza 'path/to/your/image.jpg' con la ruta de tu imagen de fondo */
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera para el modal */
+  }
+
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .close:hover {
+    color: black;
+  }
+
+  .rounded-button {
+    border-radius: 20px; /* Ajusta el radio de las esquinas según tu preferencia */
+    padding: 10px 20px; /* Ajusta el relleno según tu preferencia */
+    margin: 5px; /* Ajusta el margen según tu preferencia */
+    background-color: #FA8072; /* Ajusta el color de fondo según tu preferencia */
+    color: white; /* Ajusta el color del texto según tu preferencia */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  #FA8072
+  .rounded-button:hover {
+    background-color:  #FFA07A; /* Cambia el color de fondo al pasar el cursor */
+  }

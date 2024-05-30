@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '8006142806064792',
+        cookie     : true,
+        xfbml      : true,
+        version    : 'v20.0'
+      });
+        
+      FB.AppEvents.logPageView();   
+        
+    };
+
+    (function(d, s, id){
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+
+    
+function checkLoginState() {
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+}
+  </script>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="STYLES/Login.css">
+
+  <link rel="shortcut icon" href="IMAGES/LOGO.png" type="image/x-icon">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Itim&family=Signika+Negative:wght@300..700&display=swap" 
+  rel="stylesheet">
+  <title>Michiventuras</title>
+</head>
+
+<body>
+
+  <div class="form-body">
+    <img src="STYLES/IMAGES/LOGO.png" alt="user-login" width="120%">
+    <p class="text">INICIO DE SESIÓN</p>
+    <form id="loginForm" action="LOGIN/validar_login.php" method="POST" role="form">
+
+      <input type="email" name="correo" id="correo" placeholder="Correo" required>
+      <br><br>
+      <input type="password" name="pass" id="pass" placeholder="Contraseña" required>
+      <br><br>
+      
+      <button type="submit" class="btn btn-admin">Ingresar</button>
+      
+    </form>
+
+      <form action="Login_register.html" method="get">
+      <button type="submit" class="btn">Registrarse</button>
+
+    </form>
+
+
+    
+<fb:login-button 
+scope="public_profile,email"
+onlogin="checkLoginState();">
+</fb:login-button>
+
+  </div>
+
+  <script src="LOGIN/validaciones/acceso2.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="STYLES/Login.css">
+    <link rel="shortcut icon" href="IMAGES/LOGO.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Signika+Negative:wght@300..700&display=swap" 
+    rel="stylesheet">
+    <script src="VALIDATIONS/settings.js"></script>
+   
+    
+    <title></title>
+</head>
+
+
+<body>
+    <div class="form-body">
+
+        <img src="STYLES/IMAGES/LOGO.png" alt="user-login" width="120%">
+        <br>
+        <p class="text">REGISTRO DE USUARIO</p>
+        <form action="LOGIN/validar_registro.php" method="post" role="form" enctype="multipart/form-data">
+
+            <!-- Resto de tu formulario -->
+     
+        
+
+            <div id="mensaje-error" style="color: rgb(97, 6, 6);"></div>
+
+        
+            <div class="input-container">
+                <input type="text" id="nombre_usuario" name="nombre_usuario" placeholder="Nombre de usuario" required>
+                <span id="mensaje-error-usuario" class="mensaje-error">Nombre de usuario debe tener al menos tres caracteres</span>
+            </div>
+
+            
+            <br><br>
+
+
+            <input type="email" name="correo" placeholder="Correo" required>
+           
+
+            <div class="input-container">
+                <input type="password" id="pass" name="pass" placeholder="Contraseña" required>
+                <span id="mensaje-error-contrasena" class="mensaje-error">
+                Minimo: 8 caracteres, 1 mayúscula, 1minúscula, 1 número y 1 carácter especial</span>
+            </div>
+
+
+            <div class="input-container">
+                <input type="password" name="confirmar_pass" placeholder="Confirmar contraseña" required>
+                <span id="mensaje-error-confirmar-contrasena" class="mensaje-error">Las contraseñas no coinciden</span>
+            </div>
+
+            <button type="submit" class="btn" id="registro-btn">Registrarse</button>
+        </form>
+
+        <form action="Login_home.html" method="get">
+            <button type="sumit" class="btn">Iniciar</button>
+        </form>
+        
+        <input type="file" name="imagen" >
+
+        <div id="display_image"></div>
+
+    </div>
+
+ <script src="VALIDATIONS/Register.js"></script>
+ <script src="Registro/Validaciones_Registro.js"></script>
+</body>
+
+</html>
